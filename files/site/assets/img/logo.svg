@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" width="240" height="220">
+  <defs>
+    <path id="wordArc" d="M 30 108 A 90 90 0 0 1 210 108" />
+  </defs>
+
+  <!-- outer scalloped shell -->
+  <path d="M 20 140 A 100 100 0 0 1 220 140
+           Q 205.7 155 191.4 140
+           Q 177.1 155 162.9 140
+           Q 148.6 155 134.3 140
+           Q 120.0 155 105.7 140
+           Q 91.4 155 77.1 140
+           Q 62.9 155 48.6 140
+           Q 34.3 155 20.0 140 Z"
+        fill="#bcc99b" stroke="#42512f" stroke-width="4.5" stroke-linejoin="round"/>
+
+  <!-- inner shell cap -->
+  <path d="M 44 128 A 76 76 0 0 1 196 128
+           Q 180.8 139 165.6 128
+           Q 150.4 139 135.2 128
+           Q 120.0 139 104.8 128
+           Q 89.6 139 74.4 128
+           Q 59.2 139 44.0 128 Z"
+        fill="#eef1e0" stroke="#42512f" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- face band peeking out -->
+  <path d="M56 118 C 74 146, 166 146, 184 118 L 184 130 C 166 154, 74 154, 56 130 Z"
+        fill="#d9c19b" stroke="#42512f" stroke-width="3"/>
+
+  <!-- pearl -->
+  <circle cx="120" cy="112" r="8.5" fill="#fbfbf4" stroke="#42512f" stroke-width="2.5"/>
+
+  <!-- brows -->
+  <path d="M88 108 q6 -9 12 0 q6 9 12 0" stroke="#3f6b5e" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M128 108 q6 -9 12 0 q6 9 12 0" stroke="#3f6b5e" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <ellipse cx="93" cy="128" rx="10" ry="7.5" fill="#3f6b5e" stroke="#2c3a22" stroke-width="2"/>
+  <ellipse cx="147" cy="128" rx="10" ry="7.5" fill="#3f6b5e" stroke="#2c3a22" stroke-width="2"/>
+  <circle cx="96" cy="125.5" r="2" fill="#eef1e0"/>
+  <circle cx="150" cy="125.5" r="2" fill="#eef1e0"/>
+
+  <!-- mouth dot -->
+  <circle cx="120" cy="139" r="2.2" fill="#42512f"/>
+
+  <!-- arched wordmark -->
+  <text font-family="'IBM Plex Mono', monospace" font-size="22" font-weight="700" letter-spacing="2" fill="#eef1e0">
+    <textPath href="#wordArc" startOffset="50%" text-anchor="middle">SAILDRAWS</textPath>
+  </text>
+</svg>
