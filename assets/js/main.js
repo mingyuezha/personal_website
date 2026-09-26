@@ -39,3 +39,37 @@ document.addEventListener('DOMContentLoaded', function(){
     if(e.key === 'Escape') lightbox.classList.remove('open');
   });
 });
+
+// Click a progress video to enlarge it in a lightbox; click the surrounding area to close
+document.addEventListener('DOMContentLoaded', function(){
+  const videoLightbox = document.querySelector('.video-lightbox');
+  if(!videoLightbox) return;
+  const lbVideoWrap = videoLightbox.querySelector('.lightbox-video-wrap');
+  const lbVideo = videoLightbox.querySelector('video');
+
+  function closeVideoLightbox(){
+    lbVideo.pause();
+    videoLightbox.classList.remove('open');
+  }
+
+  document.querySelectorAll('.video-wrap').forEach(function(wrap){
+    const video = wrap.querySelector('video');
+    if(!video) return;
+    wrap.addEventListener('click', function(){
+      lbVideoWrap.style.aspectRatio = wrap.getAttribute('data-aspect') || '';
+      lbVideo.src = video.currentSrc || video.src;
+      videoLightbox.classList.add('open');
+      lbVideo.currentTime = 0;
+      lbVideo.play();
+    });
+  });
+
+  videoLightbox.addEventListener('click', function(e){
+    if(e.target === videoLightbox || e.target.closest('.lightbox-close')){
+      closeVideoLightbox();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && videoLightbox.classList.contains('open')) closeVideoLightbox();
+  });
+});
