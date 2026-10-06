@@ -416,7 +416,8 @@ a.paper:hover .venue{ color:var(--sage-950); }
   }
   .logo-link{ margin-bottom:14px; font-size:17px; }
   nav.tabs{ margin-top:18px; }
-  .home-badge{ margin-top:18px; }
+  .home-badge{ display:none; }
+  .sidebar .email-box, .sidebar .copy-row{ display:none; }
   .page{ padding:32px 24px 70px; }
   .about-grid{ grid-template-columns:1fr; }
   .avatar{ width:150px; height:150px; }
